@@ -4,7 +4,6 @@
 
 - #000000
 - #FFFFFF
-- #0A1D3B
-- #14407D
-- #19539D
-- #216BCC
+- #0A1D3B - background
+- #19539D - reading 
+- #216BCC - main

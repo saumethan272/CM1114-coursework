@@ -1,0 +1,93 @@
+body {
+    background-color: #0A1D3B;
+  }
+
+header {
+    background-color: #19539D;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    font-family: "Noto Sans Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 77.7;
+    color: white;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+main {
+    background-color: #19539D;
+    border-radius: 10px;
+}
+
+aside {
+    background-color: #19539D;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #216BCC;
+    border-radius: 10px;
+}
+
+nav li {
+    border: 2px solid; 
+    border-color: #0A1D3B;
+    background-color: #19539D;
+    list-style-type: none;
+}
+
+nav li a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav li:hover {
+    background-color: #216BCC;
+}
+
+/*
+.active {
+    background-color: #19539D;
+}
+*/
+
+table {
+    font-family: "Noto Sans Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 77.7;
+    border-collapse: collapse; 
+}
+
+table td,table th {
+    border: 2px solid; 
+    border-color: #F0F0F0;
+}
+
+table tr:nth-child(even) {
+    background-color: #F2F2F2;
+}
+
+table th:hover {
+    background-color: #0A1D3B;
+}
+
+table th {
+    background-color: #216BCC;
+    color: white;
+}
