@@ -8,6 +8,7 @@ header {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding: 10px;
+    margin: 15px;
     
 }
 
@@ -28,7 +29,7 @@ h1,h2,h3,h4,h5,h6,p,form {
     font-weight: 400;
     font-style: normal;
     font-variation-settings:
-      "wdth" 77.7;
+        "wdth" 77.7;
     color: white;
 }
 
@@ -40,14 +41,20 @@ h3 {
     font-size: 25px;
 }
 
+h5,h6 {
+    padding-left: 10%;
+}
+
 main {
-    padding: 5px;
+    margin: 15px
 }
 
 section {
     background-color: #19539D;
     border-radius: 10px;
     padding: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 aside {
@@ -60,11 +67,11 @@ footer {
     background-color: #216BCC;
     border-radius: 10px;
     padding: 10px;
+    margin: 15px;
 }
 
-nav li {
-    border-top: 6px solid; 
-    border-right: 5.5px solid; 
+nav li { 
+    border-right: 10px solid; 
     border-color: #0A1D3B;
     background-color: #19539D;
     list-style-type: none;
@@ -91,6 +98,10 @@ nav ul {
     overflow: hidden;
 }
 
+nav {
+    margin-left: 15px;
+}
+
 /*
 .active {
     background-color: #19539D;
@@ -102,10 +113,8 @@ table {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-      "wdth" 77.7;
-    border-collapse: collapse; 
-    margin: 10px;
+    border-collapse: collapse;
+    width: 80%;
 }
 
 table td,table th {
@@ -128,14 +137,10 @@ table th {
     height: 30px;
 }
 
-
 label {
     color: white;
 }
 
-legend {
-    color: white;
-}
 
 input {
     color: white;
@@ -154,4 +159,40 @@ input {
 #right {
     padding: 1px;
     padding-right: 10%;
+}
+
+#welcome-banner {
+    margin-bottom: 15px;
+}
+
+.gallery-img {
+    width: 100%;
+}
+
+#img-gallery {
+padding-top: 10px;
+
+}
+#img-gallery .row {
+    max-width:100%;
+}
+
+.container {
+    max-width: 100%;
+}
+
+#img-gallery .row {
+    width: 100%;
+    padding-bottom: 20px;
+    }
+
+#img-gallery.container {
+    margin: 0;
+    padding: 0;
+}
+
+#current-members .row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
 }
