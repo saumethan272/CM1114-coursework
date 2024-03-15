@@ -7,3 +7,7 @@
 - #0A1D3B - background
 - #19539D - reading 
 - #216BCC - main
+
+# extra page ideas
+
+- quiz
