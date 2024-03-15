@@ -13,8 +13,8 @@ header {
 }
 
 #logo {
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     float: left;
     margin-right: 10px;
 }
@@ -34,7 +34,7 @@ h1,h2,h3,h4,h5,h6,p,form {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 40px;
 }
 
 h3 {
@@ -77,7 +77,7 @@ nav li {
     list-style-type: none;
     display: block;
     float: left;
-    width: 17%;
+    width: 14%;
     padding: 16px;
 }
 
@@ -102,11 +102,10 @@ nav {
     margin-left: 15px;
 }
 
-/*
 .active {
-    background-color: #19539D;
+    background-color: #216BCC;
 }
-*/
+
 
 table {
     font-family: "Noto Sans Mono", monospace;
@@ -143,11 +142,23 @@ label {
 
 
 input {
-    color: white;
+    color: black;
 }
 
 #submit {
     color: black;
+}
+
+header #left {
+    float: left;
+    width: 50%;
+    margin-right: 20%;
+    height: auto;
+}
+
+header #right {
+    padding-right: 10px;
+    padding: 1px;
 }
 
 #left {
@@ -195,4 +206,46 @@ padding-top: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 50px;
+}
+
+.card {
+    background-color: #19539D;
+    color: white; 
+}
+
+.card-title {
+    padding-left: 10px;
+    font-size: 26px;
+}
+
+img.quiz {
+    padding: 10px;
+    width: 100%;
+}
+
+.btn{
+    background-color: #0A1D3B;
+    border-color: #0A1D3B;
+}
+
+.btn:hover{
+    background-color: #19539D;
+    border-color: #19539D;
+}
+
+#quiz {
+    background-color: #19539D;
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 10px;
+}
+
+.question {
+    border: 2px solid;
+    border-color: #0A1D3B;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
 }

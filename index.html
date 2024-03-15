@@ -12,18 +12,46 @@
     <body>
 
         <header>
-            <img src='assets/logo.jpg' alt = 'camera logo' id = "logo"/>
+            <div id="left">
+                <img src='assets/logo.jpg' alt = 'camera logo' id = "logo"/>
 
-            <h1 id = "title">Photography Society</h1> 
+                <h1 id = "title">Photography Society</h1>
+            </div>
+
+            <div id="right">
+                <form> 
+                    <input type="email" name="email" placeholder="Email">
+
+                    <input type="password" name="password" placeholder="Password">
+
+                    <button type="button" onclick="login()">Login</button> 
+
+                    <script> 
+                        var counter = 2; 
+
+                        function login(){ 
+                            if(counter % 2 == 0){ 
+                                alert('You have been logged in!'); 
+                            } 
+                            else { 
+                                alert('You have been logged out!'); 
+                            } 
+                            counter += 1; 
+                        } 
+                    </script>
+                </form>
+            </div> 
         </header>
 
         <nav>
             <ul>
                 <li class = "active"><a href="index.html">Home</a></li>
-                <li class = "active"><a href="current_members.html">Current Members</a></li>
-                <li class = "active"><a href="event_calendar.html">Event Calendar</a></li>
-                <li class = "active"><a href="img_gallery.html">Image Gallery</a></li>
-                <li class = "active"><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="current_members.html">Current Members</a></li>
+                <li><a href="event_calendar.html">Event Calendar</a></li>
+                <li><a href="img_gallery.html">Image Gallery</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="#">page</a></li>
             </ul> 
         </nav>
 
