@@ -30,12 +30,13 @@
 
         <main> 
 
-            <h3>Quiz 1</h3>
+            <h3>Camera Quiz</h3>
 
             <div id="quiz">
                 <div class="question">
                     <h2>Question 1</h2>
                     <p>What does DSLR stand for?</p>
+
                     <input type="radio" id="q1a" name="q1" value="Digital Single Lens Reflex">
                     <label for="q1a"> Digital Single Lens Reflex</label><br>
 
@@ -48,18 +49,20 @@
                 <div class="question">
                     <h2>Question 2</h2>
                     <p>What is the function of aperture in photography?</p>
+
+                    <input type="radio" id="q2c" name="q2" value="Change ISO settings">
+                    <label for="q2c"> Change ISO settings</label><br>
+                    
                     <input type="radio" id="q2a" name="q2" value="Control depth of field">
                     <label for="q2a"> Control depth of field</label><br>
 
                     <input type="radio" id="q2b" name="q2" value="Adjust shutter speed">
                     <label for="q2b"> Adjust shutter speed</label><br>
-
-                    <input type="radio" id="q2c" name="q2" value="Change ISO settings">
-                    <label for="q2c"> Change ISO settings</label><br>
                 </div>
                 <div class="question">
                     <h2>Question 3</h2>
                     <p>What does ISO measure in photography?</p>
+
                     <input type="radio" id="q3a" name="q3" value="Sensor sensitivity to light">
                     <label for="q3a"> Sensor sensitivity to light</label><br>
 
@@ -72,34 +75,52 @@
                 <div class="question">
                     <h2>Question 4</h2>
                     <p>What does the term "shutter speed" refer to?</p>
-                    <input type="radio" id="q4a" name="q4" value="Exposure time">
-                    <label for="q4a"> Exposure time</label><br>
 
                     <input type="radio" id="q4b" name="q4" value="Lens aperture size">
                     <label for="q4b"> Lens aperture size</label><br>
 
                     <input type="radio" id="q4c" name="q4" value="Image stabilization">
                     <label for="q4c"> Image stabilization</label><br>
+
+                    <input type="radio" id="q4a" name="q4" value="Exposure time">
+                    <label for="q4a"> Exposure time</label><br>
                 </div>
                 <div class="question">
                     <h2>Question 5</h2>
                     <p>What is the purpose of a camera's autofocus system?</p>
+                    
+                    <input type="radio" id="q5c" name="q5" value="Adjust white balance">
+                    <label for="q5c"> Adjust white balance</label><br>
+
                     <input type="radio" id="q5a" name="q5" value="Automatically adjust focus">
                     <label for="q5a"> Automatically adjust focus</label><br>
 
                     <input type="radio" id="q5b" name="q5" value="Control exposure">
                     <label for="q5b"> Control exposure</label><br>
-
-                    <input type="radio" id="q5c" name="q5" value="Adjust white balance">
-                    <label for="q5c"> Adjust white balance</label><br>
                 </div>
-                <button id="submit">Submit</button>
+                <button type="button" onclick="calculateScore()">Submit</button> 
+
+                <script> 
+                    function calculateScore() {
+                        const questions = document.querySelectorAll(".question");
+                        let score = 0;
+
+                        questions.forEach(question => {
+                            const selectedAnswer = question.querySelector("input:checked");
+                            if (selectedAnswer) {
+                                const correctAnswer = selectedAnswer.value;
+                                if (correctAnswer === "Digital Single Lens Reflex" || correctAnswer === "Control depth of field" || correctAnswer === "Sensor sensitivity to light" || correctAnswer === "Exposure time" || correctAnswer === "Automatically adjust focus") {
+                                    score++;
+                                }
+                            }
+                        });
+                        alert("Your score is: " + score + "/" + questions.length);
+                    } 
+                </script>
             </div>
-            
 
         </main>
 
-        
         <footer>Copyright Ethan Saum</footer>
     </body>
 </html>
