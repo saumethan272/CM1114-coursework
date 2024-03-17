@@ -102,20 +102,26 @@
 
                 <script> 
                     function calculateScore() {
-                        const questions = document.querySelectorAll(".question");
+                        const questions = document.querySelectorAll(".question"); //https://www.w3schools.com/jsref/met_document_queryselectorall.asp
                         let score = 0;
 
                         questions.forEach(question => {
-                            const selectedAnswer = question.querySelector("input:checked");
-                            if (selectedAnswer) {
-                                const correctAnswer = selectedAnswer.value;
-                                if (correctAnswer === "Digital Single Lens Reflex" || correctAnswer === "Control depth of field" || correctAnswer === "Sensor sensitivity to light" || correctAnswer === "Exposure time" || correctAnswer === "Automatically adjust focus") {
-                                    score++;
+                            const inputs = question.querySelectorAll("input");
+                            inputs.forEach(input => {
+                                if (input.checked) { //https://www.w3schools.com/jsref/prop_checkbox_checked.asp
+                                    const correctAnswer = input.value;
+                                    if (correctAnswer === "Digital Single Lens Reflex" || 
+                                        correctAnswer === "Control depth of field" || 
+                                        correctAnswer === "Sensor sensitivity to light" || 
+                                        correctAnswer === "Exposure time" || 
+                                        correctAnswer === "Automatically adjust focus") {
+                                        score++;
+                                    }
                                 }
-                            }
+                            });
                         });
-                        alert("Your score is: " + score + "/" + questions.length);
-                    } 
+                        alert("Your score is: " + score + "/" + questions.length); 
+                    }
                 </script>
             </div>
 
