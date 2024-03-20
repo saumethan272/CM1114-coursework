@@ -17,7 +17,7 @@
         <!-- Header Section -->
         <header>
             <!-- Left Header Section -->
-            <div id="left">
+            <div id="left_nav">
                 <!-- Logo Image -->
                 <img src='assets/logo.jpg' alt = 'camera logo' id = "logo"/>
                 <!-- Title -->
@@ -25,7 +25,7 @@
             </div>
 
             <!-- Right Header Section -->
-            <div id="right">
+            <div id="right_nav">
                 <form> 
                     <!-- Email Input -->
                     <input type="email" name="email" placeholder="Email">
@@ -56,20 +56,23 @@
         <nav>
             <ul>
                 <!-- Navigation Links -->
-                <li class = "active"><a href="index.html">Home</a></li>
+                <li class = "active_left"><a href="index.html">Home</a></li>
                 <li><a href="current_members.html">Current Members</a></li>
                 <li><a href="event_calendar.html">Event Calendar</a></li>
                 <li><a href="img_gallery.html">Image Gallery</a></li>
                 <li><a href="contact_us.html">Contact Us</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
-                <li><a href="#">page</a></li>
+                <li class = "nav_right"><a href="#">page</a></li>
             </ul> 
         </nav>
 
         <!-- Main Content -->
         <main> 
-            <h3 id = "welcome-banner">Welcome to the Photography Society</h3>
 
+            <div class="welcome-banner">
+                <h3>Welcome to the Photography Society</h3>
+            </div>
+            
             <!-- Carousel -->
             <div id="home-carousel" class="carousel slide" data-bs-ride="carousel">
 

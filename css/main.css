@@ -1,14 +1,16 @@
 
 body {
-    background-color: #0A1D3B;
+    background-color: white;
 }
 
 header {
-    background-color: #19539D;
+    background-color: #0A1D3B;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding: 10px;
-    margin: 15px;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
     
 }
 
@@ -50,7 +52,7 @@ main {
 }
 
 section {
-    background-color: #19539D;
+    background-color: #0A1D3B;
     border-radius: 10px;
     padding: 5px;
     margin-top: 15px;
@@ -58,7 +60,7 @@ section {
 }
 
 aside {
-    background-color: #19539D;
+    background-color: #0A1D3B;
     border-radius: 10px;
     padding: 5px;
 }
@@ -71,13 +73,13 @@ footer {
 }
 
 nav li { 
-    border-right: 10px solid; 
     border-color: #0A1D3B;
     background-color: #19539D;
     list-style-type: none;
     display: block;
     float: left;
-    width: 14%;
+
+    width: 14.2857142857%;
     padding: 16px;
 }
 
@@ -100,10 +102,24 @@ nav ul {
 
 nav {
     margin-left: 15px;
+    margin-right: 15px;
 }
 
 .active {
     background-color: #216BCC;
+}
+
+.active_left {
+    background-color: #216BCC;
+    border-bottom-left-radius: 10px;
+}
+
+.nav_left {
+    border-bottom-left-radius: 10px;
+}
+
+.nav_right {
+    border-bottom-right-radius: 10px;
 }
 
 
@@ -164,16 +180,35 @@ header #right {
 #left {
     float: left;
     width: 50%;
-    margin-right: 10%;
+    margin-top: 10px;
+    margin-right: 5px;
+    background-color: #0A1D3B;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 #right {
+    margin-left: 5px;
+    margin-top: 10px;
     padding: 1px;
-    padding-right: 10%;
 }
 
-#welcome-banner {
-    margin-bottom: 15px;
+#left_nav {
+    float: left;
+    width: 50%;
+    margin-right: 22.5%;
+}
+
+#right_nav {
+    padding: 1px;
+}
+
+.welcome-banner {
+    background-color: #0A1D3B;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+
 }
 
 .gallery-img {
@@ -248,4 +283,8 @@ img.quiz {
     margin: 10px;
     padding: 10px;
     margin-bottom: 20px;
+}
+
+form {
+    
 }
