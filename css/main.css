@@ -122,14 +122,13 @@ nav {
     border-bottom-right-radius: 10px;
 }
 
-
 table {
     font-family: "Noto Sans Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     border-collapse: collapse;
-    width: 80%;
+    width: 100%;
 }
 
 table td,table th {
@@ -141,7 +140,7 @@ table tr:nth-child(even) {
     background-color: #F2F2F2;
 }
 
-table th:hover {
+th:hover {
     background-color: #0A1D3B;
 }
 
@@ -155,7 +154,6 @@ table th {
 label {
     color: white;
 }
-
 
 input {
     color: black;
