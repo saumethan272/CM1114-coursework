@@ -53,9 +53,9 @@ main {
 
 section {
     background-color: #0A1D3B;
-    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     padding: 5px;
-    margin-top: 15px;
     margin-bottom: 15px;
 }
 
@@ -66,7 +66,8 @@ aside {
 }
 
 footer {
-    background-color: #216BCC;
+    background-color: #19539D;
+    color: white;
     border-radius: 10px;
     padding: 10px;
     margin: 15px;
@@ -78,7 +79,7 @@ nav li {
     list-style-type: none;
     display: block;
     float: left;
-
+    height: 60px;
     width: 14.2857142857%;
     padding: 16px;
 }
@@ -179,10 +180,9 @@ header #right {
     float: left;
     width: 50%;
     margin-top: 10px;
-    margin-right: 5px;
-    background-color: #0A1D3B;
-    padding: 10px;
-    border-radius: 10px;
+    margin-right: 10px;
+    background-color: white;
+    
 }
 
 #right {
@@ -191,13 +191,13 @@ header #right {
     padding: 1px;
 }
 
-#left_nav {
+#left_header {
     float: left;
     width: 50%;
     margin-right: 22.5%;
 }
 
-#right_nav {
+#right_header {
     padding: 1px;
 }
 
@@ -225,9 +225,9 @@ padding-top: 10px;
     max-width: 100%;
 }
 
-#img-gallery .row {
-    width: 100%;
-    padding-bottom: 20px;
+#img-gallery .row {  
+    width: 100%; 
+    padding-left: 20px;  
     }
 
 #img-gallery.container {
@@ -236,9 +236,23 @@ padding-top: 10px;
 }
 
 #current-members .row {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 50px;
+    padding: 20px;
+}
+
+#current-members .col-sm {
+    width: 20px;
+}
+
+#current-members h5, h6 {
+    color: #0A1D3B;
+}
+
+.row h5, h6 {
+    padding: 20px;
+}
+
+.row {
+    padding-top: 15px;
 }
 
 .card {
@@ -246,9 +260,11 @@ padding-top: 10px;
     color: white; 
 }
 
+
 .card-title {
     padding-left: 10px;
     font-size: 26px;
+    color: white;
 }
 
 img.quiz {
@@ -284,5 +300,28 @@ img.quiz {
 }
 
 form {
-    
+    background-color: #0A1D3B;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: white;
+    color: black;
+    border: none;
+    color: #0A1D3B;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#quiz {
+    margin-top: 15px;
+}
+
+.col-sm-6 {
+    width: 33.333333333%;
 }

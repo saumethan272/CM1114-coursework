@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <title>Photography Society</title>
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/main.css">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wdth@77.7&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <header>
+            <img src='assets/logo.jpg' alt = 'camera logo' id = "logo"/>
+
+            <h1 id = "title">Photography Society</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li class = "nav_left"><a href="index.html">Home</a></li>
+                <li><a href="current_members.html">Current Members</a></li>
+                <li><a href="event_calendar.html">Event Calendar</a></li>
+                <li><a href="img_gallery.html">Image Gallery</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li class = "active"><a href="quiz.html">Quiz</a></li>
+                <li class = "nav_right"><a href="#">page</a></li>
+            </ul> 
+        </nav>
+
+        <main> 
+
+            <div class="welcome-banner">
+                <h3>Camera Preference Quiz</h3> 
+            </div>
+
+            <div id="quiz">
+                <div class="question">
+                    <h2>Question 1</h2>
+                    <p>Which of the following features is most important to you in a camera?</p>
+
+                    <input type="radio" id="image_quality" name="feature" value="b">
+                    <label for="image_quality"> Image quality and resolution</label><br>
+
+                    <input type="radio" id="low_light" name="feature" value="c">
+                    <label for="low_light"> Low-light performance</label><br>
+
+                    <input type="radio" id="video_capabilities" name="feature" value="a">
+                    <label for="video_capabilities"> Video capabilities and recording quality</label><br>
+
+                    <input type="radio" id="portability" name="feature" value="d">
+                    <label for="portability"> Portability and ease of use</label><br><br>
+                </div>
+                <div class="question">
+                    <h2>Question 2</h2>
+                    <p>What type of photography do you primarily intend to use the camera for?</p>
+
+                    <input type="radio" id="landscape" name="photography_type" value="b">
+                    <label for="landscape"> Landscape and nature photography</label><br>
+
+                    <input type="radio" id="portrait" name="photography_type" value="a">
+                    <label for="portrait"> Portrait and studio photography</label><br>
+
+                    <input type="radio" id="sports" name="photography_type" value="c">
+                    <label for="sports"> Sports and action photography</label><br>
+
+                    <input type="radio" id="travel" name="photography_type" value="d">
+                    <label for="travel"> Travel and street photography</label><br><br>
+                </div>
+                <div class="question">
+                    <h2>Question 3</h2>
+                    <p>What is your budget range for purchasing a camera?</p>
+
+                    <input type="radio" id="budget_under_500" name="budget" value="c">
+                    <label for="budget_under_500"> Under $500</label><br>
+
+                    <input type="radio" id="budget_500_1000" name="budget" value="b">
+                    <label for="budget_500_1000"> $500 - $1000</label><br>
+
+                    <input type="radio" id="budget_1000_2000" name="budget" value="a">
+                    <label for="budget_1000_2000"> $1000 - $2000</label><br>
+
+                    <input type="radio" id="budget_over_2000" name="budget" value="d">
+                    <label for="budget_over_2000"> Over $2000</label><br><br>
+                </div>
+                <div class="question">
+                    <h2>Question 4</h2>
+                    <p>Which lens options are you most interested in?</p>
+
+                    <input type="radio" id="wide_angle" name="lens_options" value="d">
+                    <label for="wide_angle"> Wide-angle lenses for capturing expansive scenes</label><br>
+
+                    <input type="radio" id="prime" name="lens_options" value="b">
+                    <label for="prime"> Prime lenses for achieving sharpness and depth of field control</label><br>
+
+                    <input type="radio" id="telephoto" name="lens_options" value="c">
+                    <label for="telephoto"> Telephoto lenses for distant subjects and wildlife photography</label><br>
+
+                    <input type="radio" id="zoom" name="lens_options" value="a">
+                    <label for="zoom"> Versatile zoom lenses for flexibility in framing and composition</label><br><br>
+                </div>
+                <div class="question">
+                    <h2>Question 5</h2>
+                    <p>How important is compatibility with third-party accessories and lenses for you?</p>
+
+                    <input type="radio" id="accessories_not_important" name="compatibility" value="c">
+                    <label for="accessories_not_important"> Not important, I prefer to stick with brand-specific accessories</label><br>
+
+                    <input type="radio" id="accessories_somewhat_important" name="compatibility" value="a">
+                    <label for="accessories_somewhat_important"> Somewhat important, but I'm open to both brand-specific and third-party options</label><br>
+
+                    <input type="radio" id="accessories_very_important" name="compatibility" value="b">
+                    <label for="accessories_very_important"> Very important, I want flexibility and options for accessories and lenses</label><br>
+
+                    <input type="radio" id="accessories_not_sure" name="compatibility" value="d">
+                    <label for="accessories_not_sure"> I'm not sure about this aspect of camera compatibility</label><br><br>
+                </div>
+                <button type="button" onclick="findPreference()">Submit</button> 
+
+                <script> 
+
+                function a1(){
+
+                }
+                    function findPreference() {
+                        const questions = document.querySelectorAll(".question");
+                        
+                        let canonScore = 0;
+                        let nikonScore = 0;
+                        let sonyScore = 0;
+                        let fujifilmScore = 0;
+                        
+                        questions.forEach(question => {
+                            const inputs = question.querySelectorAll("input[type='radio']");
+                            inputs.forEach(input => {
+                                if (input.checked) {
+                                    const correctAnswer = input.value;
+                                    const questionClass = question.classList[0];
+                                    
+                                    if (questionClass === "question" && correctAnswer === "a") {
+                                        canonScore++;
+                                    } else if (questionClass === "question" && correctAnswer === "b") {
+                                        nikonScore++;
+                                    } else if (questionClass === "question" && correctAnswer === "c") {
+                                        sonyScore++;
+                                    } else if (questionClass === "question" && correctAnswer === "d") {
+                                        fujifilmScore++;
+                                    }
+                                }
+                            });
+                        });
+                        
+                        let highestScore = Math.max(canonScore, nikonScore, sonyScore, fujifilmScore);
+                        
+                        if (highestScore === canonScore && canonScore ==! 0) {
+                            alert("You must buy a Canon camera" );
+                        } else if (highestScore === nikonScore && canonScore ==! 0) {
+                            alert("You must buy a Nikon camera");
+                        } else if (highestScore === sonyScore && canonScore ==! 0) {
+                            alert("You must buy a Sony camera");
+                        } else if (highestScore === fujifilmScore && canonScore ==! 0) {
+                            alert("You must buy a Fujifilm camera");
+                        } else {
+                            alert("You must not buy a camera");
+                        }
+                    }
+                </script>
+                
+            </div>
+
+
+        </main>
+
+        <footer>Copyright Ethan Saum</footer>
+    </body>
+</html>
