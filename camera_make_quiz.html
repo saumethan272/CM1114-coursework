@@ -15,14 +15,18 @@
 
     <body>
 
+        <!-- Header Section -->
         <header>
+            <!-- Logo Image -->
             <img src='assets/logo.jpg' alt = 'camera logo' id = "logo"/>
-
+            <!-- Title -->
             <h1 id = "title">Photography Society</h1>
         </header>
 
+        <!-- Navigation -->
         <nav>
             <ul>
+                <!-- Navigation Links -->
                 <li class = "nav_left"><a href="index.html">Home</a></li>
                 <li><a href="current_members.html">Current Members</a></li>
                 <li><a href="event_calendar.html">Event Calendar</a></li>
@@ -33,13 +37,18 @@
             </ul> 
         </nav>
 
+        <!-- Main Content -->
         <main> 
 
+            <!-- Title -->
             <div class="welcome-banner">
                 <h3>Camera Preference Quiz</h3> 
             </div>
 
+            <!-- Quiz -->
             <div id="quiz">
+
+                <!-- Question 1 -->
                 <div class="question">
                     <h2>Question 1</h2>
                     <p>Which of the following features is most important to you in a camera?</p>
@@ -56,6 +65,8 @@
                     <input type="radio" id="portability" name="feature" value="d">
                     <label for="portability"> Portability and ease of use</label><br><br>
                 </div>
+
+                <!-- Question 2 -->
                 <div class="question">
                     <h2>Question 2</h2>
                     <p>What type of photography do you primarily intend to use the camera for?</p>
@@ -72,6 +83,8 @@
                     <input type="radio" id="travel" name="photography_type" value="d">
                     <label for="travel"> Travel and street photography</label><br><br>
                 </div>
+
+                <!-- Question 3 -->
                 <div class="question">
                     <h2>Question 3</h2>
                     <p>What is your budget range for purchasing a camera?</p>
@@ -88,6 +101,8 @@
                     <input type="radio" id="budget_over_2000" name="budget" value="d">
                     <label for="budget_over_2000"> Over $2000</label><br><br>
                 </div>
+
+                <!-- Question 4 -->
                 <div class="question">
                     <h2>Question 4</h2>
                     <p>Which lens options are you most interested in?</p>
@@ -104,6 +119,8 @@
                     <input type="radio" id="zoom" name="lens_options" value="a">
                     <label for="zoom"> Versatile zoom lenses for flexibility in framing and composition</label><br><br>
                 </div>
+
+                <!-- Question 5 -->
                 <div class="question">
                     <h2>Question 5</h2>
                     <p>How important is compatibility with third-party accessories and lenses for you?</p>
@@ -120,21 +137,22 @@
                     <input type="radio" id="accessories_not_sure" name="compatibility" value="d">
                     <label for="accessories_not_sure"> I'm not sure about this aspect of camera compatibility</label><br><br>
                 </div>
+
+                <!-- Submit Button (calls calculate score function) -->
                 <button type="button" onclick="findPreference()">Submit</button> 
 
                 <script> 
-
-                function a1(){
-
-                }
+                    //Find Camera Preference function
                     function findPreference() {
                         const questions = document.querySelectorAll(".question");
                         
+                        //Variables
                         let canonScore = 0;
                         let nikonScore = 0;
                         let sonyScore = 0;
                         let fujifilmScore = 0;
                         
+                        //for each loop
                         questions.forEach(question => {
                             const inputs = question.querySelectorAll("input[type='radio']");
                             inputs.forEach(input => {
@@ -155,8 +173,10 @@
                             });
                         });
                         
+                        //Finds the variable with highest number
                         let highestScore = Math.max(canonScore, nikonScore, sonyScore, fujifilmScore);
                         
+                        //alerts user to their prefered camera brand
                         if (highestScore === canonScore && canonScore ==! 0) {
                             alert("You must buy a Canon camera" );
                         } else if (highestScore === nikonScore && canonScore ==! 0) {
@@ -170,12 +190,10 @@
                         }
                     }
                 </script>
-                
             </div>
-
-
         </main>
 
+        <!-- Footer -->
         <footer>Copyright Ethan Saum</footer>
     </body>
 </html>

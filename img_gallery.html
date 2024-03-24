@@ -15,14 +15,18 @@
 
     <body>
 
+        <!-- Header Section -->
         <header>
+            <!-- Logo Image -->
             <img src='assets/logo.jpg' alt = 'camera logo' id = "logo"/>
-
-            <h1 id = "title">Photography Society</h1> 
+            <!-- Title -->
+            <h1 id = "title">Photography Society</h1>
         </header>
 
+        <!-- Navigation -->
         <nav>
             <ul>
+                <!-- Navigation Links -->
                 <li class = "nav_left"><a href="index.html">Home</a></li>
                 <li><a href="current_members.html">Current Members</a></li>
                 <li><a href="event_calendar.html">Event Calendar</a></li>
@@ -33,14 +37,18 @@
             </ul> 
         </nav>
 
+        <!-- Main Content -->
         <main> 
 
+            <!-- Title -->
             <div class="welcome-banner">
                 <h3>Image Gallery</h3> 
             </div>
             
-
+            <!-- Image Gallery -->
             <div id = "img-gallery" class = "container">
+
+                <!-- Row 1 -->
                 <div class = "row">
                     <div class = "col-md">
                         <img src='assets/image1.jpg' alt = 'image1' class = "gallery-img"/>
@@ -58,6 +66,8 @@
                         <img src='assets/image1.jpg' alt = 'image1' class = "gallery-img"/>
                     </div>
                 </div>
+
+                <!-- Row 2 -->
                 <div class = "row">
                     <div class = "col-md">
                         <img src='assets/image1.jpg' alt = 'image1' class = "gallery-img"/>
@@ -75,21 +85,26 @@
                         <img src='assets/image1.jpg' alt = 'image1' class = "gallery-img"/>
                     </div>
                 </div>
+
+                <!-- Image Hover Script -->
                 <script> 
                     document.getElementById("img-gallery").addEventListener("mouseover", highlight); 
-                    document.getElementById("img-gallery").addEventListener("mouseout", delight); 
+                    document.getElementById("img-gallery").addEventListener("mouseout", delight);
+
+                        //Highlight Image Function
                         function highlight() { 
                             document.getElementById("img-gallery").style="border: solid blue 2px;" 
-                        } 
+                        }
+                        
+                        //Delight Image Function
                         function delight() { 
                             document.getElementById("img-gallery").style="border: none;" 
                         } 
-                    </script>
+                </script>
             </div>
         </main>
 
-    
-
-        <footer> footer </footer>
+        <!-- Footer -->
+        <footer>Copyright Ethan Saum</footer>
     </body>
 </html>
