@@ -22,7 +22,7 @@
 - #19539D 
 - #216BCC 
 
-# extra page ideas
+# Extra page ideas
 
 - Quiz
 - Camera equipment to buy recomendations 
