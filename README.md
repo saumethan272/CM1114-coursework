@@ -27,3 +27,9 @@
 - Quiz
 - Camera equipment to buy recomendations 
 - Drone (360 image)
+
+# To Do
+
+- Change and name images (alt tags)
+- Check HTML for errors
+- Extra Page
