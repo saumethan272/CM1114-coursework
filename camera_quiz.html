@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>Photography Society</title>
         <!-- Bootstrap -->
@@ -14,14 +15,18 @@
 
     <body>
 
+        <!-- Header Section -->
         <header>
+            <!-- Logo Image -->
             <img src='assets/logo.jpg' alt = 'camera logo' id = "logo"/>
-
+            <!-- Title -->
             <h1 id = "title">Photography Society</h1>
         </header>
 
+        <!-- Navigation -->
         <nav>
             <ul>
+                <!-- Navigation Links -->
                 <li class = "nav_left"><a href="index.html">Home</a></li>
                 <li><a href="current_members.html">Current Members</a></li>
                 <li><a href="event_calendar.html">Event Calendar</a></li>
@@ -32,13 +37,18 @@
             </ul> 
         </nav>
 
+        <!-- Main Content -->
         <main> 
 
+            <!-- Title -->
             <div class="welcome-banner">
                 <h3>Camera Quiz</h3> 
             </div>
 
+            <!-- Quiz -->
             <div id="quiz">
+
+                <!-- Question 1 -->
                 <div class="question">
                     <h2>Question 1</h2>
                     <p>What does DSLR stand for?</p>
@@ -52,6 +62,8 @@
                     <input type="radio" id="q1c" name="q1" value="Direct Sun Light Reflector">
                     <label for="q1c"> Direct Sun Light Reflector</label><br>
                 </div>
+
+                <!-- Question 2 -->
                 <div class="question">
                     <h2>Question 2</h2>
                     <p>What is the function of aperture in photography?</p>
@@ -65,6 +77,8 @@
                     <input type="radio" id="q2b" name="q2" value="Adjust shutter speed">
                     <label for="q2b"> Adjust shutter speed</label><br>
                 </div>
+
+                <!-- Question 3 -->
                 <div class="question">
                     <h2>Question 3</h2>
                     <p>What does ISO measure in photography?</p>
@@ -78,6 +92,8 @@
                     <input type="radio" id="q3c" name="q3" value="Image resolution">
                     <label for="q3c"> Image resolution</label><br>
                 </div>
+
+                <!-- Question 4 -->
                 <div class="question">
                     <h2>Question 4</h2>
                     <p>What does the term "shutter speed" refer to?</p>
@@ -91,6 +107,8 @@
                     <input type="radio" id="q4a" name="q4" value="Exposure time">
                     <label for="q4a"> Exposure time</label><br>
                 </div>
+
+                <!-- Question 5 -->
                 <div class="question">
                     <h2>Question 5</h2>
                     <p>What is the purpose of a camera's autofocus system?</p>
@@ -104,13 +122,18 @@
                     <input type="radio" id="q5b" name="q5" value="Control exposure">
                     <label for="q5b"> Control exposure</label><br>
                 </div>
+
+                <!-- Submit Button (calls calculate score function) -->
                 <button type="button" onclick="calculateScore()">Submit</button> 
 
+                <!-- Calculate Score Script -->
                 <script> 
+                    //Calculate Score function
                     function calculateScore() {
                         const questions = document.querySelectorAll(".question"); //https://www.w3schools.com/jsref/met_document_queryselectorall.asp
                         let score = 0;
 
+                        //for each loop
                         questions.forEach(question => {
                             const inputs = question.querySelectorAll("input");
                             inputs.forEach(input => {
@@ -126,13 +149,14 @@
                                 }
                             });
                         });
+                        //alerts user to their score
                         alert("Your score is: " + score + "/" + questions.length); 
                     }
                 </script>
             </div>
-
         </main>
 
+        <!-- Footer -->
         <footer>Copyright Ethan Saum</footer>
     </body>
 </html>
