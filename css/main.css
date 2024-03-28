@@ -164,24 +164,6 @@ table th {
     height: 30px;
 }
 
-=======
-/* Even row */
->>>>>>> 84abae106d4edd1f500214dc76ac78272e6dec3e
-table tr:nth-child(even) {
-    background-color: #F2F2F2;
-}
-
-<<<<<<< HEAD
-table tr:hover {
-    background-color: #0A1D3B;
-}
-
-=======
-/* Hover effect for table */
-th:hover {
-    background-color: #0A1D3B;
-}
-
 /* Table headers */
 table th {
     background-color: #216BCC;
@@ -190,8 +172,15 @@ table th {
     height: 30px;
 }
 
+table tr:nth-child(even) {
+    background-color: #F2F2F2;
+}
+
+table tr:hover {
+    background-color: #0A1D3B;
+}
+
 /* Label */
->>>>>>> 84abae106d4edd1f500214dc76ac78272e6dec3e
 label {
     color: white;
 }
