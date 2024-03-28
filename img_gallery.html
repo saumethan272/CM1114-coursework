@@ -42,7 +42,7 @@
             <div id = "img-gallery" class = "container">
                 <div class = "row">
                     <div class = "col-md">
-                        <img src='assets/image1.jpg' alt = 'image1' class = "gallery-img"/>
+                        <img src='assets/image1.jpg' onmouseout="highlight(this)" alt = 'image1' class = "gallery-img"/>
                     </div>
                     <div class = "col-md">
                         <img src='assets/image1.jpg' alt = 'image1' class = "gallery-img"/>
@@ -74,16 +74,17 @@
                         <img src='assets/image1.jpg' alt = 'image1' class = "gallery-img"/>
                     </div>
                 </div>
+
                 <script> 
-                    document.getElementById("img-gallery").addEventListener("mouseover", highlight); 
-                    document.getElementById("img-gallery").addEventListener("mouseout", delight); 
-                        function highlight() { 
-                            document.getElementById("img-gallery").style="border: solid blue 2px;" 
-                        } 
-                        function delight() { 
-                            document.getElementById("img-gallery").style="border: none;" 
-                        } 
-                    </script>
+                    document.getElementsByClassName("col-md").addEventListener("mouseover", highlight); 
+                    document.getElementsByClassName("col-md").addEventListener("mouseout", delight); 
+                    function highlight(x) { 
+                        x.style="border: solid blue 2px;" 
+                    } 
+                    function delight() { 
+                        document.getElementsByClassName("col-md").style="border: none;" 
+                    } 
+                </script>
             </div>
         </main>
 

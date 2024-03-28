@@ -137,19 +137,18 @@ table td,table th {
     border-color: #F0F0F0;
 }
 
+table th {
+    color: white;
+    width: 200px;
+    height: 30px;
+}
+
 table tr:nth-child(even) {
     background-color: #F2F2F2;
 }
 
-th:hover {
+table tr:hover {
     background-color: #0A1D3B;
-}
-
-table th {
-    background-color: #216BCC;
-    color: white;
-    width: 200px;
-    height: 30px;
 }
 
 label {
