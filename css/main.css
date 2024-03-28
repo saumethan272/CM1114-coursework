@@ -18,7 +18,7 @@ header {
 /* Logo */
 #logo {
     height: 50px;
-    width: 50px;
+    width: 65px;
     float: left;
     margin-right: 10px;
 }
@@ -157,7 +157,6 @@ table td,table th {
     border-color: #F0F0F0;
 }
 
-<<<<<<< HEAD
 table th {
     color: white;
     width: 200px;
@@ -173,11 +172,12 @@ table th {
 }
 
 table tr:nth-child(even) {
-    background-color: #F2F2F2;
+    background-color: #b9b9b9;
 }
 
 table tr:hover {
     background-color: #0A1D3B;
+    color: white;
 }
 
 /* Label */
@@ -224,6 +224,7 @@ header #right {
     margin-left: 5px;
     margin-top: 10px;
     padding: 1px;
+    height: 758px;
 }
 
 /* Left header section */
@@ -278,12 +279,20 @@ padding-top: 10px;
 
 /* Current members column */
 #current-members .col-sm {
-    width: 20px;
+    width: 30px;
+    padding: 10px;
+    margin: 10px;
+
 }
 
 /* Current members headings */
-#current-members h5, h6 {
+#current-members h6 {
     color: #0A1D3B;
+}
+
+#current-members h5 {
+    color: #0A1D3B;
+    height: 88px;
 }
 
 /* Row headings */
