@@ -1,5 +1,9 @@
 # CM1114-coursework
 
+# GitHub Pages Link
+
+https://saumethan272.github.io/CM1114-coursework/
+
 # Pages
 
 - Home (Lab)
@@ -11,7 +15,7 @@
     - Camera Quiz (Extra Page)
     - Lens Quiz (Extra Page)
     - Camera brand Quiz (Extra Page)
-- Page (Extra Page)
+- Drone (Extra Page)
 
 
 # Colour Theme
@@ -33,3 +37,4 @@
 - Change and name images (alt tags)
 - Check HTML for errors
 - Extra Page
+- last lab
