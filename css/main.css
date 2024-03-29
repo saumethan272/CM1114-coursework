@@ -131,6 +131,12 @@ nav {
     border-bottom-left-radius: 10px;
 }
 
+/* Active navigation item on right*/
+.active_right {
+    background-color: #216BCC;
+    border-bottom-right-radius: 10px;
+}
+
 /* Left navigation */
 .nav_left {
     border-bottom-left-radius: 10px;
@@ -384,4 +390,14 @@ button {
 /* Column */
 .col-sm-6 {
     width: 33.333333333%;
+}
+
+/* drone 360 image*/
+#drone{
+    display: grid;
+    margin: 20px auto;
+    border: 0 none;
+    width: 100%;
+    height: 700px;
+    border-radius: 10px;
 }
