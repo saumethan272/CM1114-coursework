@@ -15,7 +15,7 @@ https://saumethan272.github.io/CM1114-coursework/
     - Camera Quiz (Extra Page)
     - Lens Quiz (Extra Page)
     - Camera brand Quiz (Extra Page)
-- Drone (Extra Page)
+- Equipment (Extra Page)
 
 
 # Colour Theme
@@ -29,7 +29,7 @@ https://saumethan272.github.io/CM1114-coursework/
 # Extra page ideas
 
 - Quiz
-- Camera equipment to buy recomendations 
+- Camera equipment to buy recomendations (with filter for brands)
 - Drone (360 image)
 
 # To Do
