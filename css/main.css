@@ -262,7 +262,8 @@ padding-top: 10px;
 #img-gallery .row {
     max-width:100%;
     width: 100%; 
-    padding-left: 20px; 
+    padding-left: 10px; 
+    padding-top: 20px;
 }
 
 /* Image gallery container */
