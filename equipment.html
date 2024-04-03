@@ -46,6 +46,95 @@
                 <h3>Equipment</h3>
             </div>
 
+            <!-- Filter -->
+            <div class="filter">
+
+                <h3>Filter</h3>
+
+                <div class="dropdown"> <!--https://getbootstrap.com/docs/5.3/components/dropdowns/#single-button-->
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Brand
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" onclick="filterBrand('Nikon')">Nikon</a></li>
+                        <li><a class="dropdown-item" onclick="filterBrand('Canon')">Canon</a></li>
+                        <li><a class="dropdown-item" onclick="filterBrand('Amazon')">AmazonBasics</a></li>
+                        <li><a class="dropdown-item" onclick="filterBrand('Manfrotto')">Manfrotto</a></li>
+                        <li><a class="dropdown-item" onclick="filterBrand('Gitzo')">Gitzo</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Price Range
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" onclick="filterPrice(0, 500)">£0 - £500</a></li>
+                        <li><a class="dropdown-item" onclick="filterPrice(501, 1500)">£500 - £1500</a></li>
+                        <li><a class="dropdown-item" onclick="filterPrice(1501, 10000)">£1500 +</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Item
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" onclick="filterItem('camera')">Camera</a></li>
+                        <li><a class="dropdown-item" onclick="filterItem('lens')">Lens</a></li>
+                        <li><a class="dropdown-item" onclick="filterItem('tripod')">Tripod</a></li>
+                    </ul>
+                </div>
+
+                <!-- JavaScript for filter -->
+                <script>
+                    //Filter brand function
+                    function filterBrand(brand){
+                        var items = document.querySelectorAll('.equipment_table tr'); //https://www.w3schools.com/jsref/met_document_queryselectorall.asp
+
+                        //for each loop
+                        items.forEach(function(item) { 
+                            var itemBrand = item.getAttribute('data-brand'); //recives value of brand attribute 
+                            if (itemBrand === brand) {
+                                item.style.display = 'table-row'; //displays the item
+                            } else {
+                            item.style.display = 'none'; //hides the item
+                            }
+                        });
+                    }
+
+                    //Filter price function
+                    function filterPrice(minPrice, maxPrice) {
+                        var items = document.querySelectorAll('.equipment_table tr'); //https://www.w3schools.com/jsref/met_document_queryselectorall.asp
+
+                        //for each loop
+                        items.forEach(function(item) {
+                            var itemPrice = parseInt(item.getAttribute('data-price')); //recives value of price attribute and converts it from string to int
+                            if (itemPrice >= minPrice && itemPrice <= maxPrice) {
+                                item.style.display = 'table-row'; //displays the item
+                            } else {
+                                item.style.display = 'none'; //hides the item
+                            }
+                        });
+                    }
+
+                    //Filter item function
+                    function filterItem(itemType) {
+                        var items = document.querySelectorAll('.equipment_table tr'); //https://www.w3schools.com/jsref/met_document_queryselectorall.asp
+
+                        //for each loop
+                        items.forEach(function(item) {
+                            var itemItemType = item.getAttribute('data-item'); //recives value of item attribute 
+                            if (itemItemType === itemType || itemType === 'all') {
+                                item.style.display = 'table-row'; //displays the item
+                            } else {
+                                item.style.display = 'none'; //hides the item
+                            }
+                        });
+                    }
+                </script>
+            </div>
+
             <!--Equipment Container-->
             <div class="container"> <!--https://getbootstrap.com/docs/5.3/layout/columns/#vertical-alignment-->
                 <!--Row-->
@@ -58,7 +147,7 @@
                         <!--Budget Equipment Table-->
                         <table class="equipment_table">
                             <!-- Budget Camera 1 -->
-                            <tr>
+                            <tr data-brand="Canon" data-price="450" data-item="camera">
                                 <td>
                                     <a href="https://www.amazon.co.uk/Canon-2000D-Camera-18-55-3-5-5-6/dp/B07B1B265L" target="_blank">
                                         <img src='assets/budget_camera_1.jpg' alt='budget camera' class="equipment" />
@@ -69,8 +158,9 @@
                                 </td>
                                 <td>£450</td>
                             </tr>
+                            
                             <!-- Budget Camera 2 -->
-                            <tr>
+                            <tr data-brand="Nikon" data-price="440" data-item="camera">
                                 <td>
                                     <a href="https://www.amazon.co.uk/Nikon-D3500-AF-P-18-55-Kit/dp/B07GZP6JPG" target="_blank">
                                         <img src='assets/budget_camera_2.jpg' alt='budget camera' class="equipment" />
@@ -82,7 +172,7 @@
                                 <td>£440</td>
                             </tr>
                             <!-- Budget Lens 1 -->
-                            <tr>
+                            <tr data-brand="Canon" data-price="110" data-item="lens">
                                 <td>
                                     <a href="https://www.amazon.co.uk/Canon-Camera-lens-Black-50/dp/B00XKSBMQA" target="_blank">
                                         <img src='assets/budget_lens_1.jpg' alt='budget lens' class="equipment" />
@@ -94,7 +184,7 @@
                                 <td>£110</td>
                             </tr>
                             <!-- Budget Lens 2 -->
-                            <tr>
+                            <tr data-brand="Nikon" data-price="165" data-item="lens">
                                 <td>
                                     <a href="https://www.amazon.co.uk/Nikon-AF-S-NIKKOR-Focus-Cameras/dp/B001RTTO4Q/ref=sr_1_3?crid=SDFLK4185Y9U&dib=eyJ2IjoiMSJ9.Qr8itNfkTg6tx-tLAudPdmZJf9NjfPJiHY8baQXGW7RkynY0yVHAcCdbnRzjT6cylGvUaXoztOC5Tb6FvdSI-7biFyw8OvGygd4dV6miONoUggLLD5o9YHt17GKnGkFWK9Z6jhK-tYMgbKRSdQ5p2_Z-9WqxYBDf0deitTGHbZ9xnVa-eLtXyfRCyVk_KwXxxbwM3FrBihfuga8iLlmFvvKHMEKgtSRxFgSWY17FcEM.tVH9YwaDp38dzSWRZJYVeBZ_Hdy2d7u73f8TrqkBWEI&dib_tag=se&keywords=nikon+lens&qid=1712159480&sprefix=nikon+len%2Caps%2C125&sr=8-3&ufe=app_do%3Aamzn1.fos.d7e5a2de-8759-4da3-993c-d11b6e3d217f" target="_blank">
                                         <img src='assets/budget_lens_2.jpg' alt='budget lens' class="equipment" />
@@ -106,7 +196,7 @@
                                 <td>£165</td>
                             </tr>
                             <!-- Budget Tripod -->
-                            <tr>
+                            <tr data-brand="Amazon" data-price="15" data-item="tripod">
                                 <td>
                                     <a href="https://www.amazon.co.uk/AmazonBasics-127cm-Lightweight-Tripod-Bag/dp/B00XI87KV8" target="_blank">
                                         <img src='assets/budget_tripod.jpg' alt='budget tripod' class="equipment" />
@@ -127,7 +217,7 @@
                         <!-- Midrange Equipment Table -->
                         <table class="equipment_table">
                             <!-- Midrange Camera 1 -->
-                            <tr>
+                            <tr data-brand="Canon" data-price="750" data-item="camera">
                                 <td>
                                     <a href="https://www.amazon.co.uk/1892C001-Canon-EOS-77D-Body/dp/B06VSTCWJ9" target="_blank">
                                         <img src='assets/mid_camera_1.jpg' alt='midrange camera' class="equipment" />
@@ -139,7 +229,7 @@
                                 <td>£750</td>
                             </tr>
                             <!-- Midrange Camera 2 -->
-                            <tr>
+                            <tr data-brand="Nikon" data-price="1100" data-item="camera">
                                 <td>
                                     <a href="https://www.amazon.co.uk/Nikon-D7500-Digital-DSLR-Camera/dp/B071QXWN9R#:~:text=The%20D7500%20employs%20the%20same,produces%20amazingly%20sharp%2C%20crisp%20images." target="_blank">
                                         <img src='assets/mid_camera_2.jpg' alt='midrange camera' class="equipment" />
@@ -151,7 +241,7 @@
                                 <td>£1,100</td>
                             </tr>
                             <!-- Midrange Lens 1 -->
-                            <tr>
+                            <tr data-brand="Nikon" data-price="550" data-item="lens">
                                 <td>
                                     <a href="https://www.amazon.co.uk/Nikon-24-120MM-F3-5-5-6G-AF-S-IF-ED/dp/B00009VQG6" target="_blank">
                                         <img src='assets/mid_lens_1.jpg' alt='midrange lens' class="equipment" />
@@ -163,7 +253,7 @@
                                 <td>£550</td>
                             </tr>
                             <!-- Midrange Lens 2 -->
-                            <tr>
+                            <tr data-brand="Canon" data-price="350" data-item="lens">
                                 <td>
                                     <a href="https://www.amazon.co.uk/Canon-24-105mm-3-5-5-6-Certified-Refurbished/dp/B06XRX4ST2/ref=sr_1_3?crid=2TJSCTYCOFG3R&dib=eyJ2IjoiMSJ9.tiovS7tRbzj41tVbaFv227AreVkUAHvaHbIckwtbNMTnTHMgWh340La3S4PHilZIPtAdlZgmZtyzBgIac1Nks-SE9pRqnsamxzLR5DY1nz2BSRROcZvybieQpon_Arij_uElL4dJ6GzQBMmuhpq5ESHB076VJQxr563PflqMPVrgTgYl_DRwa5-A_O3QbdY9VN8mWVVQcIZGo0QZrsGV8UVf7IPgSFQz2Z91BQY7qXs.Ua9Xgo93edhEg1GcJQI_Gd02q0sTQ_g4tx-Mc_tK1i0&dib_tag=se&keywords=Canon+EF+24-105mm+f%2F3.5-5.6+IS+STM&qid=1712159768&sprefix=%2Caps%2C235&sr=8-3" target="_blank">
                                         <img src='assets/mid_lens_2.jpg' alt='midrange lens' class="equipment" />
@@ -175,7 +265,7 @@
                                 <td>£350</td>
                             </tr>
                             <!-- Midrange Tripod -->
-                            <tr>
+                            <tr data-brand="Manfrotto" data-price="60" data-item="tripod">
                                 <td>
                                     <a href="https://www.amazon.co.uk/Manfrotto-MKCOMPACTLT-BK-Compact-Light-Tripod/dp/B00L6F16L0/" target="_blank">
                                         <img src='assets/mid_tripod.jpg' alt='midrange tripod' class="equipment" />
@@ -196,7 +286,7 @@
                         <!-- Expensive Equipment Table -->
                         <table class="equipment_table">
                             <!-- Expensive Camera 1 -->
-                            <tr>
+                            <tr data-brand="Canon" data-price="2800" data-item="camera">
                                 <td>
                                     <a href="https://www.amazon.co.uk/Canon-Frame-Digital-Camera-Earplug/dp/B01KURGS9E" target="_blank">
                                         <img src='assets/expensive_camera_1.jpg' alt='expensive camera' class="equipment" />
@@ -208,7 +298,7 @@
                                 <td>£2,800</td>
                             </tr>
                             <!-- Expensive Camera 2 -->
-                            <tr>
+                            <tr data-brand="Nikon" data-price="2800" data-item="camera">
                                 <td>
                                     <a href="https://www.amazon.co.uk/Nikon-D850-FX-Format-Digital-Camera/dp/B076BXDX5F" target="_blank">
                                         <img src='assets/expensive_camera_2.jpg' alt='expensive camera' class="equipment" />
@@ -220,7 +310,7 @@
                                 <td>£2,800</td>
                             </tr>
                             <!-- Expensive Lens 1 -->
-                            <tr>
+                            <tr data-brand="Canon" data-price="2200" data-item="lens">
                                 <td>
                                     <a href="https://www.amazon.co.uk/Canon-EF-70-200mm-f2-8-Telephoto/dp/B07DLRXF43" target="_blank">
                                         <img src='assets/expensive_lens_1.jpg' alt='expensive lens' class="equipment" />
@@ -232,7 +322,7 @@
                                 <td>£2200</td>
                             </tr>
                             <!-- Expensive Lens 2 -->
-                            <tr>
+                            <tr data-brand="Nikon" data-price="1500" data-item="lens">
                                 <td>
                                     <a href="https://www.amazon.co.uk/Nikon-AF-S-NIKKOR-14-24mm-2-8G/dp/B000VDCTCI" target="_blank">
                                         <img src='assets/expensive_lens_2.jpg' alt='expensive lens' class="equipment" />
@@ -244,7 +334,7 @@
                                 <td>£1,500</td>
                             </tr>
                             <!-- Expensive Tripod -->
-                            <tr>
+                            <tr data-brand="Gitzo" data-price="1000" data-item="tripod">
                                 <td>
                                     <a href="https://www.amazon.co.uk/Gitzo-GT3542LS-Systematic-Tripod-Large/dp/B001U5XZYU/" target="_blank">
                                         <img src='assets/expensive_tripod.jpg' alt='expensive tripod' class="equipment" />
@@ -253,7 +343,7 @@
                                 <td>
                                     <a href="https://www.amazon.co.uk/Gitzo-GT3542LS-Systematic-Tripod-Large/dp/B001U5XZYU/" target="_blank">Gitzo GT3542LS Systematic Tripod Series 3 Carbon 4 Sections Long</a>
                                 </td>
-                                <td>£999</td>
+                                <td>£1000</td>
                             </tr>
                         </table>
                     </div>
