@@ -404,8 +404,22 @@ button {
     margin-top: 15px;
     margin-right: 7.5px;
     margin-left: 7.5px;
+    border-radius: 10px;
 }
 
 .equipment {
     width: 200px;
+}
+
+.equipment_table {
+    background-color: #0A1D3B;
+    padding: 5px;
+}
+
+.equipment_table td {
+    padding: 10px;
+}
+
+.equipment_table tr {
+    border: 10px solid #19539D;
 }
