@@ -445,4 +445,14 @@ button {
 
 .filter .btn {
     color: white;
+} 
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(170, 168, 168);
 }
