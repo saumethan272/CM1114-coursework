@@ -86,6 +86,8 @@
                     </ul>
                 </div>
 
+                <a onclick="filterItem('all')" onclick="filterPrice('all', 'all')" onclick="filterBrand('all')" class="btn">Clear</a>
+
                 <!-- JavaScript for filter -->
                 <script>
                     //Filter brand function
@@ -95,7 +97,7 @@
                         //for each loop
                         items.forEach(function(item) { 
                             var itemBrand = item.getAttribute('data-brand'); //recives value of brand attribute 
-                            if (itemBrand === brand) {
+                            if (itemBrand === brand || brand === 'all') {
                                 item.style.display = 'table-row'; //displays the item
                             } else {
                             item.style.display = 'none'; //hides the item
@@ -110,7 +112,7 @@
                         //for each loop
                         items.forEach(function(item) {
                             var itemPrice = parseInt(item.getAttribute('data-price')); //recives value of price attribute and converts it from string to int
-                            if (itemPrice >= minPrice && itemPrice <= maxPrice) {
+                            if ((itemPrice >= minPrice && itemPrice <= maxPrice) || (minPrice === 'all' && maxPrice === 'all')) {
                                 item.style.display = 'table-row'; //displays the item
                             } else {
                                 item.style.display = 'none'; //hides the item

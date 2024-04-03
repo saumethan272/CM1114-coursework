@@ -442,3 +442,7 @@ button {
     font-size: 18px;
     margin-right: 30px;
 }
+
+.filter .btn {
+    color: white;
+}
