@@ -104,11 +104,12 @@ aside h5 {
     background-color: #0A1D3B;
     padding: 10px;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 /* News Paragraph*/
 .news p {
-    width: 85%;
+    width: 80%;
     float: right;
     margin-top: 20px;
 }
