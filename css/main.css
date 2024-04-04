@@ -59,18 +59,53 @@ main {
 
 /* Section */
 section {
-    background-color: #0A1D3B;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    padding: 5px;
+    padding-top: 10px;
     margin-bottom: 15px;
+    display: flex; 
+}
+
+#about {
+    width: 50%;
+    background-color: #19539D;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#about p {
+    text-align: justify;
+    margin-top: 10px;
+    background-color: #0A1D3B;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 0px;
 }
 
 /* Aside */
 aside {
-    background-color: #0A1D3B;
+    background-color: #19539D;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px;
+    width: 50%;
+    margin-left: 10px; 
+}
+
+aside h5 {
+    padding: 0px;
+}
+
+.news {
+    margin-top: 10px;
+    background-color: #0A1D3B;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.news p {
+    width: 85%;
+    float: right;
+    margin-top: 20px;
 }
 
 /* Footer */
@@ -80,6 +115,7 @@ footer {
     border-radius: 10px;
     padding: 10px;
     margin: 15px;
+    max-width: 100%;
 }
 
 /* Navigation list items */
@@ -161,13 +197,20 @@ nav {
 .event_calendar td, .event_calendar th {
     border: 2px solid; 
     border-color: #F0F0F0;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.event_calendar td {
+    width: 255px;
 }
 
 .event_calendar th {
     background-color: #216BCC;
     color: white;
-    width: 200px;
-    height: 30px;
+    width: auto;
+    text-align: center;
+    height: 50px;
 }
 
 /* Event Calendar Alternating row colors */
@@ -178,6 +221,30 @@ nav {
 /* Event Calendar Hover effect */
 .event_calendar tr:hover {
     background-color: #0A1D3B;
+    color: white;
+}
+
+#event_form {
+    margin-top: 10px;
+    background-color: #19539D;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#event_form  p {
+    padding: 10px;
+    background-color: #0A1D3B;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#event_form form{
+    background-color: #19539D;
+    margin-bottom: 0;
+}
+
+#event_form label{
+    font-size: 15px;
 }
 
 /* Label */
@@ -348,9 +415,8 @@ img.quiz {
 
 /* Questions */
 .question {
-    border: 2px solid;
-    border-color: #0A1D3B;
-    border-radius: 5px;
+    background-color: #0A1D3B;
+    border-radius: 10px;
     margin: 10px;
     padding: 10px;
     margin-bottom: 20px;
