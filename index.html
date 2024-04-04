@@ -27,29 +27,42 @@
 
             <!-- Right Header Section -->
             <div id="right_header">
-                <form> 
+
+                <form name="login"> 
                     <!-- Email Input -->
                     <input type="email" name="email" placeholder="Email">
                     <!-- Password Input -->
                     <input type="password" name="password" placeholder="Password">
                     <!-- Login Button -->
-                    <button type="button" onclick="login()">Login</button> 
+                    <button type="button" onclick="log_in()">Login</button>
 
-                    <!-- JavaScript for Login -->
-                    <script> 
-                        var counter = 2; 
-
-                        function login(){ 
-                            if(counter % 2 == 0){ 
-                                alert('You have been logged in!'); 
-                            } 
-                            else { 
-                                alert('You have been logged out!'); 
-                            } 
-                            counter += 1; 
-                        } 
-                    </script>
+                    <!-- JavaScript for Login --> 
                 </form>
+                <script> 
+                    var counter = 2; 
+
+                    function log_in(){ 
+                        var email = document.forms["login"]["email"].value; 
+                        var password = document.forms["login"]["password"].value;
+
+                        if(counter % 2 == 0){
+                            if (email == "" && password == "") { 
+                                alert("You must enter your email and password!"); 
+                            } else if (email == "") { 
+                                alert("You event must enter your email!");
+                            } else if (password == "") { 
+                                alert("You event must enter your password!"); 
+                            } else { 
+                            alert('You have been logged in!');
+                            counter += 1;  
+                            } 
+                        } 
+                        else { 
+                            alert('You have been logged out!'); 
+                            counter += 1;  
+                        } 
+                    } 
+                </script>
             </div> 
         </header>
 
@@ -168,8 +181,6 @@
                 </aside>
 
             </section>
-
-            
 
         </main>
 
