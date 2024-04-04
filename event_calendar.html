@@ -56,72 +56,87 @@ Threat Mitigation: Add a cooldown to limit requests  -->
 
             <!-- Event Calendar Table -->
             <table class="event_calendar">
+                <!-- Week days -->
                 <tr>
                     <th></th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th><th>Sunday</th>
                 </tr>
+                <!-- Week 1 -->
                 <tr>
                     <th>Week 1</th><td></td><td>Photography Workshop: Basics of Composition</td><td></td><td></td><td></td><td></td><td></td>
                 </tr>
+                <!-- Week 2 -->
                 <tr>
                     <th>Week 2</th><td></td><td></td><td></td><td></td><td></td><td>Outdoor Photo Walk: Capturing Landscapes</td><td></td>
                 </tr>
+                <!-- Week 3 -->
                 <tr>
                     <th>Week 3</th><td></td><td>Portrait Photography Session: Lighting Techniques</td><td></td><td></td><td></td><td></td><td></td>
                 </tr>
+                <!-- Week 4 -->
                 <tr>
                     <th>Week 4</th><td></td><td>Editing Masterclass: Adobe Lightroom Tutorial</td><td></td><td></td><td></td><td></td><td></td>
                 </tr>
+                <!-- Week 5 -->
                 <tr>
                     <th>Week 5</th><td></td><td></td><td></td><td></td><td></td><td></td><td>Street Photography Meetup: Exploring Urban Scenes</td>
                 </tr>
+                <!-- Week 6 -->
                 <tr>
                     <th>Week 6</th><td></td><td></td><td>Macro Photography Excursion: Close-up Nature Shots</td><td></td><td></td><td></td><td></td>
                 </tr>
+                <!-- Week 7 -->
                 <tr>
                     <th>Week 7</th><td></td><td></td><td></td><td>Night Photography Workshop: Long Exposure Techniques</td><td></td><td></td><td></td>
                 </tr>
+                <!-- Week 8 -->
                 <tr>
                     <th>Week 8</th><td></td><td>Photography Exhibition Opening Night</td><td></td><td></td><td></td><td></td><td></td>
                 </tr>
+                <!-- Week 9 -->
                 <tr>
                     <th>Week 9</th><td></td><td></td><td></td><td></td><td></td><td></td><td>Wildlife Photography Safari</td>
                 </tr>
+                <!-- Week 10 -->
                 <tr>
                     <th>Week 10</th><td>Drone Photography Workshop: Aerial Photography Techniques</td><td></td><td></td><td></td><td></td><td></td><td></td>
                 </tr>
+                <!-- Week 11 -->
                 <tr>
                     <th>Week 11</th><td></td><td></td><td>Black and White Photography Challenge: Monochrome Shots</td><td></td><td></td><td></td><td></td>
                 </tr>
+                <!-- Week 12 -->
                 <tr>
                     <th>Week 12</th><td></td><td></td><td></td><td></td><td>Photography Competition: Theme - "Beauty of Nature"</td><td></td><td></td>
                 </tr>
             </table>
             
+            <!-- Suggest event form -->
             <div id="event_form">
                 <p> 
                     Want to recommend an event? Tell us below!
                 </p>
+                <!-- Form -->
                 <form name="event" >
                     <label for="event_title">Event Title:</label>
                     <input type="text" id="event_title" name="event_title" placeholder="Enter event title">
                 
                     <label for="event_date">Event Date:</label>
                     <input type="date" id="event_date" name="event_date">
-                
+                    <!-- Button which calls submit_event function -->
                     <button type="button" onclick="submit_event()">Submit</button>
 
+                    <!-- Script for submiting form -->
                     <script> 
+                        //submit form function 
                         function submit_event() { 
                             var title = document.forms["event"]["event_title"].value; 
                             var date = document.forms["event"]["event_date"].value; 
-                            if (title == "") { 
+                            if (title == "") { //checks for a title
                                 alert("An event must have a title!"); 
-                            } else { 
-                                if (date.length == 0) { 
+                            } else if (date.length == 0) { //checks for a date
                                 alert("An event must have a date!"); 
-                                } else { 
-                                    alert("Event submitted! The society will contact you soon!"); 
-                                } 
+                            } else { //submits form
+                                alert("Event submitted! The society will contact you soon!"); 
                             } 
                         } 
                     </script>

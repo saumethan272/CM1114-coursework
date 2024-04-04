@@ -66,6 +66,7 @@ section {
     display: flex; 
 }
 
+/* About section*/
 #about {
     width: 50%;
     background-color: #19539D;
@@ -73,6 +74,7 @@ section {
     border-radius: 10px;
 }
 
+/* About paragraph*/
 #about p {
     text-align: justify;
     margin-top: 10px;
@@ -91,10 +93,12 @@ aside {
     margin-left: 10px; 
 }
 
+/* About header*/
 aside h5 {
     padding: 0px;
 }
 
+/* News section*/
 .news {
     margin-top: 10px;
     background-color: #0A1D3B;
@@ -102,6 +106,7 @@ aside h5 {
     border-radius: 10px;
 }
 
+/* News Paragraph*/
 .news p {
     width: 85%;
     float: right;
@@ -116,6 +121,7 @@ footer {
     padding: 10px;
     margin: 15px;
     max-width: 100%;
+    text-align: center;
 }
 
 /* Navigation list items */
@@ -201,10 +207,12 @@ nav {
     padding: 10px;
 }
 
+/*  Event Calendar Table cells */
 .event_calendar td {
     width: 255px;
 }
 
+/*  Event Calendar Table headers */
 .event_calendar th {
     background-color: #216BCC;
     color: white;
@@ -224,6 +232,7 @@ nav {
     color: white;
 }
 
+/* Event form section */
 #event_form {
     margin-top: 10px;
     background-color: #19539D;
@@ -231,6 +240,7 @@ nav {
     border-radius: 10px;
 }
 
+/* Event form paragraph */
 #event_form  p {
     padding: 10px;
     background-color: #0A1D3B;
@@ -238,11 +248,13 @@ nav {
     margin-bottom: 10px;
 }
 
+/* Form for event form */
 #event_form form{
     background-color: #19539D;
     margin-bottom: 0;
 }
 
+/* Event form label*/
 #event_form label{
     font-size: 15px;
 }
@@ -457,17 +469,20 @@ button {
     width: 33.333333333%;
 }
 
+/* Container */
 .container {
     max-width: 100%;
     margin: 0;
     padding: 0;
 }
 
+/* Row */
 .row {
     margin: 0;
     padding: 0;
 }
 
+/* Column */
 .col {
     color: white;
     background-color: #19539D;
@@ -478,23 +493,28 @@ button {
     border-radius: 10px;
 }
 
+/* Equipment section */
 .equipment {
     width: 200px;
 }
 
+/* Equipment table */
 .equipment_table {
     background-color: #0A1D3B;
     padding: 5px;
 }
 
+/* Equipment table cell*/
 .equipment_table td {
     padding: 10px;
 }
 
+/* Equipment table row*/
 .equipment_table tr {
     border: 10px solid #19539D;
 }
 
+/* Filter equipment */
 .filter {
     background-color: #19539D;
     padding: 10px;
@@ -503,25 +523,30 @@ button {
     display: flex;
 }
 
+/* Button dropdown */
 .dropdown {
     margin-right: 30px; 
 }
 
+/* Filter header */
 .filter h3 {
     padding: 5px;
     font-size: 18px;
     margin-right: 30px;
 }
 
+/* Filter button */
 .filter .btn {
     color: white;
 } 
 
+/* link */
 a {
     text-decoration: none;
     color: white;
 }
 
+/* Link hover */
 a:hover {
     text-decoration: none;
     color: rgb(170, 168, 168);

@@ -44,29 +44,30 @@ Threat Mitigation: login cooldown to limit the amount of login requests from a u
                     <input type="password" name="password" placeholder="Password">
                     <!-- Login Button -->
                     <button type="button" onclick="log_in()">Login</button>
-
-                    <!-- JavaScript for Login --> 
                 </form>
+
+                <!-- JavaScript for Login -->
                 <script> 
                     var counter = 2; 
 
+                    //login function
                     function log_in(){ 
                         var email = document.forms["login"]["email"].value; 
                         var password = document.forms["login"]["password"].value;
 
                         if(counter % 2 == 0){
-                            if (email == "" && password == "") { 
+                            if (email == "" && password == "") { //no email or password
                                 alert("You must enter your email and password!"); 
-                            } else if (email == "") { 
+                            } else if (email == "") { //no email 
                                 alert("You event must enter your email!");
-                            } else if (password == "") { 
+                            } else if (password == "") { //no password
                                 alert("You event must enter your password!"); 
-                            } else { 
+                            } else { //login
                             alert('You have been logged in!');
                             counter += 1;  
                             } 
                         } 
-                        else { 
+                        else { //log out
                             alert('You have been logged out!'); 
                             counter += 1;  
                         } 
@@ -160,10 +161,11 @@ Threat Mitigation: login cooldown to limit the amount of login requests from a u
                         As we navigate the complexities of modern life, our shared commitment to environmental sustainability is evident. Green spaces, renewable energy initiatives, and eco-friendly practices reflect our dedication to preserving the planet for future generations. Together, we strive for a balance that harmonizes the needs of our community with the well-being of the Earth.
                     </p></div>
 
-                    <!-- Tweets Section -->
+                    <!-- Lates news Section -->
                 <aside>
                     <h3> Latest News</h3>
 
+                    <!-- News item 1 -->
                     <div class="news">
                         <h5>Welcome Our New Event Coordinator</h5>
                         <img src='assets/Mia.jpg' alt='Photo of Mia Rodriguez' class="rounded-circle massie-hovering" width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden">
@@ -172,6 +174,7 @@ Threat Mitigation: login cooldown to limit the amount of login requests from a u
                         </p>
                     </div>
 
+                    <!-- News item 2 -->
                     <div class="news">
                         <h5>New Editing Masterclass For Adobe Lightroom</h5>
                         <img src='assets/image2.jpg' alt='Photo of Mia Rodriguez' class="rounded-circle massie-hovering" width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden">
@@ -180,6 +183,7 @@ Threat Mitigation: login cooldown to limit the amount of login requests from a u
                         </p>
                     </div>
 
+                    <!-- News item 3 -->
                     <div class="news">
                         <h5>New Updated Equipment Page</h5>
                         <img src='assets/camera_brand.jpg' alt='Photo of Mia Rodriguez' class="rounded-circle massie-hovering" width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden">
@@ -188,9 +192,7 @@ Threat Mitigation: login cooldown to limit the amount of login requests from a u
                         </p>
                     </div>
                 </aside>
-
             </section>
-
         </main>
 
         <!-- Footer -->
