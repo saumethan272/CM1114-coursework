@@ -110,7 +110,7 @@ aside h5 {
 
 /* Footer */
 footer {
-    background-color: #19539D;
+    background-color: #216BCC;
     color: white;
     border-radius: 10px;
     padding: 10px;
@@ -350,7 +350,7 @@ padding-top: 10px;
     width: 30px;
     padding: 10px;
     margin: 10px;
-    background-color: #0A1D3B;
+    background-color: #19539D;
     color: white;
     border-radius: 10px;
 }
@@ -525,4 +525,9 @@ a {
 a:hover {
     text-decoration: none;
     color: rgb(170, 168, 168);
+}
+
+/* contact us form */
+#left form {
+    background-color: #19539D;
 }
